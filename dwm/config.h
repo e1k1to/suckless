@@ -55,7 +55,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-    { "obs",      NULL,       NULL,       1 << 7,       0,           -1 },
+    	{ "obs",      NULL,       NULL,       1 << 7,       0,           -1 },
 	{ "Signal",   NULL,       NULL,       1 << 8,       0,           -1 },
 
 };
@@ -95,12 +95,12 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-    { MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },
-    { MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("discord") },
-    { MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("pavucontrol") },
-    { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacsclient -c -a emacs") },
-    { MODKEY,                       XK_g,      spawn,          SHCMD("openurl") },
-    { 0,                            XK_Print,  spawn,          SHCMD("screenshot") },
+    	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },
+    	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("discord") },
+    	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("pavucontrol") },
+    	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacsclient -c -a emacs") },
+    	{ MODKEY,                       XK_g,      spawn,          SHCMD("openurl") },
+    	{ 0,                            XK_Print,  spawn,          SHCMD("screenshot") },
 	{ 0, 				XF86XK_MonBrightnessUp,spawn,	       SHCMD("brightnessctl set 1%+") },
 	{ 0,				XF86XK_MonBrightnessDown,spawn,	       SHCMD("brightnessctl set 1%-") },
 	{ 0,				XF86XK_AudioLowerVolume,spawn, 	       SHCMD("pamixer -d 5; pkill -RTMIN+10 dwmblocks") },
