@@ -1,4 +1,4 @@
-sudo pacman -S --needed libx11 libxft libxinerama xclip scrot pipewire-pulse pamixer pavucontrol mpv bc dunst yt-dlp feh xorg-setxkbmap libxrandr
+sudo pacman -S --needed xorg xorg-xinit libx11 libxft libxinerama xclip scrot pipewire-pulse pamixer pavucontrol mpv bc dunst yt-dlp feh xorg-setxkbmap libxrandr
 
 #!/bin/bash
 cd st && make && sudo make install && cd ..
