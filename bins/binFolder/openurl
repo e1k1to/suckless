@@ -1,0 +1,2 @@
+#!/bin/bash
+urlDm=$(cat ${HOME}/suckless/bins/urls | dmenu -fn "ttf-liberation:size=12" -nb "#222222" -nf "#bbbbbb" -sb "#8f2525" -sf "#eeeeee" ) && firefox "${urlDm}"

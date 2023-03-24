@@ -1,0 +1,14 @@
+#!/bin/bash
+num1="$(cat /sys/class/power_supply/BAT0/energy_now)"
+num2="$(cat /sys/class/power_supply/BAT0/energy_full)"
+
+
+batAtual="$(echo "scale=2; 100 * $num1/$num2" | bc -l )"
+
+status="$(cat /sys/class/power_supply/BAT0/status)"
+
+echo "$batAtual%"
+
+case $BUTTON in
+    2) notify-send "Bateria atual:" "$batAtual% \n<b>Status:</b> \n$status" ;;
+esac

@@ -1,0 +1,7 @@
+#!/bin/bash
+cupd=$(checkupdates | wc -l)
+echo "$cupd updates "
+
+case $BUTTON in
+	1) st -e sudo pacman -Syu ;;
+esac

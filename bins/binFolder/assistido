@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ $@ == "" ]]; then
+    echo "Uso: $0 nomeArquivo.mp4"
+else
+    mv "$1" "[Assistido] $1" 
+fi

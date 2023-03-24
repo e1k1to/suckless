@@ -1,0 +1,15 @@
+#!/bin/bash
+while true
+do
+    num1="$(cat /sys/class/power_supply/BAT0/energy_now)"
+    num2="$(cat /sys/class/power_supply/BAT0/energy_full)"
+
+    porcentoBat=$(echo "scale=2; 100*$num1/$num2" | bc -l)
+
+    statusCarregando="$(cat /sys/class/power_supply/BAT0/status)"
+
+    if (( $(echo "$porcentoBat < 10" | bc -l) )) && [[ "$statusCarregando" == "Discharging" ]]; then
+        notify-send -u critical "Bateria fraca: $porcentoBat%";
+    fi
+    sleep 180
+done
