@@ -36,9 +36,9 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-    "xrandr", "--output", "eDP-1", "--mode", "1366x768", NULL,
+    "xrandr", "--output", "DP-4", "--mode", "1920x1080", "--primary", "--output", "HDMI-0", "--mode", "1920x1080", "--right-of", "DP-4", NULL,
     "setxkbmap", "-layout", "br", NULL,
-    "feh", "--bg-fill", "/home/eiki/Pictures/tuxx.png", NULL,
+    "feh", "--bg-fill", "/home/eiki/Pictures/tuxx.png", "--bg-fill", "/home/eiki/Pictures/tuxx.png", NULL,
     "dwmblocks", NULL,
     "dunst", NULL,
     "autostart", NULL,
@@ -55,7 +55,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-    	{ "obs",      NULL,       NULL,       1 << 7,       0,           -1 },
+    { "obs",      NULL,       NULL,       1 << 7,       0,           -1 },
 	{ "Signal",   NULL,       NULL,       1 << 8,       0,           -1 },
 
 };
@@ -64,7 +64,7 @@ static const Rule rules[] = {
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
-static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const int lockfullscreen = 0; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -95,12 +95,12 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-    	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },
-    	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("discord") },
-    	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("pavucontrol") },
-    	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacsclient -c -a emacs") },
-    	{ MODKEY,                       XK_g,      spawn,          SHCMD("openurl") },
-    	{ 0,                            XK_Print,  spawn,          SHCMD("screenshot") },
+    { MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },
+    { MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("discord") },
+    { MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("pavucontrol") },
+    { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacsclient -c -a emacs") },
+    { MODKEY,                       XK_g,      spawn,          SHCMD("openurl") },
+    { 0,                            XK_Print,  spawn,          SHCMD("screenshot") },
 	{ 0, 				XF86XK_MonBrightnessUp,spawn,	       SHCMD("brightnessctl set 1%+") },
 	{ 0,				XF86XK_MonBrightnessDown,spawn,	       SHCMD("brightnessctl set 1%-") },
 	{ 0,				XF86XK_AudioLowerVolume,spawn, 	       SHCMD("pamixer -d 5; pkill -RTMIN+10 dwmblocks") },

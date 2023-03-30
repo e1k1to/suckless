@@ -1,4 +1,4 @@
-sudo pacman -S --needed xorg xorg-xinit libx11 libxft libxinerama xclip scrot pipewire-pulse pamixer pavucontrol mpv bc dunst yt-dlp feh xorg-setxkbmap libxrandr pacman-contrib noto-fonts nofo-fonts-cjk noto-fonts-emoji ttf-liberation ttf-anonymous-pro
+sudo pacman -S --needed xorg xorg-xinit libx11 libxft libxinerama xclip scrot pipewire-pulse pamixer pavucontrol mpv bc dunst yt-dlp feh xorg-setxkbmap libxrandr pacman-contrib noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-liberation ttf-anonymous-pro
 
 #!/bin/bash
 cd st && make && sudo make install && cd ..
