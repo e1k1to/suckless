@@ -19,12 +19,14 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'chrisbra/unicode.vim'
 
 Plug 'turbio/bracey.vim' 
+ 
+Plug 'luk400/vim-jukit'
 
 vim.call('plug#end')
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "bash", "c", "cpp", "markdown", "lua", "rust", "html", "css", "javascript" },
+  ensure_installed = { "bash", "c", "c_sharp", "cpp", "markdown", "lua", "rust", "html", "css", "javascript" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
