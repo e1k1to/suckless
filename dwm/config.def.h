@@ -99,6 +99,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("discord") },
     { MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("pavucontrol") },
     { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacsclient -c -a emacs") },
+    { MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("st -e cmus") },
     { MODKEY,                       XK_g,      spawn,          SHCMD("openurl") },
     { 0,                            XK_Print,  spawn,          SHCMD("screenshot") },
 	{ 0, 				XF86XK_MonBrightnessUp,spawn,	       SHCMD("brightnessctl set 1%+") },
