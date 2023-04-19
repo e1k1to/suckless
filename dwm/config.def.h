@@ -11,28 +11,24 @@ static const unsigned int maxWTab 			= 600;	/* tab menu width */
 static const unsigned int maxHTab 			= 200;	/* tab menu height */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "ttf-liberation:size=12,", "NotoColorEmoji:pixelsize=12" };
-static const char dmenufont[]       = "ttf-liberation:size=12";
-//static const char col_gray1[]       = "#222222";
+static const char *fonts[]          = { "ttf-liberation:size=14,", "NotoColorEmoji:pixelsize=12" };
+static const char dmenufont[]       = "ttf-liberation:size=14";
 static const char col_gray1[]       = "#001c14";
-//static const char col_gray2[]       = "#444444";
 static const char col_gray2[]       = "#444444";
-//static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray3[]       = "#bbbbbb";
-//static const char col_gray4[]       = "#eeeeee";
 static const char col_gray4[]       = "#eeeeee";
-//static const char col_cyan[]        = "#005577";
-static const char col_cyan[]        = "#f8b0b3";
-//static const char col_cyan[]        = "#8f2525";
+static const char col_primary[]     = "#ff0303";
+static const char col_white[]       = "#ffffff";
+static const char col_black[]       = "#000000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray1, col_gray4, col_gray4 },
-	[SchemeSel]  = { col_gray1, col_cyan,  col_gray4  },
+	[SchemeNorm] = { col_white, col_black, col_white },
+	[SchemeSel]  = { col_black, col_white,  col_primary  },
 };
 
 static const char *const autostart[] = {
@@ -88,7 +84,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_white, "-sb", col_primary, "-sf", col_white, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
