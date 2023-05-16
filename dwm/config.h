@@ -33,9 +33,6 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-    "xrandr", "--output", "DP-4", "--mode", "1920x1080", "--primary", "--output", "HDMI-0", "--mode", "1920x1080", "--right-of", "DP-4", NULL,
-    "setxkbmap", "-layout", "br", NULL,
-    "feh", "--bg-fill", "/home/eiki/Pictures/tuxx.png", "--bg-fill", "/home/eiki/Pictures/tuxx.png", NULL,
     "dwmblocks", NULL,
     "dunst", NULL,
     "autostart", NULL,

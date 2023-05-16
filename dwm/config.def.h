@@ -25,16 +25,14 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_primary[]     = "#ff0303";
 static const char col_white[]       = "#ffffff";
 static const char col_black[]       = "#000000";
+static const char col_pink[]        = "#ffcbdb";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_black, col_black },
+	[SchemeNorm] = { col_pink , col_black, col_black },
 	[SchemeSel]  = { col_black, col_white,  col_white  },
 };
 
 static const char *const autostart[] = {
-    "xrandr", "--output", "DP-4", "--mode", "1920x1080", "--primary", "--output", "HDMI-0", "--mode", "1920x1080", "--right-of", "DP-4", NULL,
-    "setxkbmap", "-layout", "br", NULL,
-    "feh", "--bg-fill", "/home/eiki/Pictures/tuxx.png", "--bg-fill", "/home/eiki/Pictures/tuxx.png", NULL,
     "dwmblocks", NULL,
     "dunst", NULL,
     "autostart", NULL,
