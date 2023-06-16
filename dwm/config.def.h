@@ -41,7 +41,11 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
+<<<<<<< HEAD
 static const char *tags[] = { " ¹", " ²", " 󰊴³", " ⁴", " 󰭻⁵" };
+=======
+static const char *tags[] = { "1", "2", "3", "4", "5"};
+>>>>>>> c3a89d8da5fa74ff24647e582984d7aa1b140a85
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -50,8 +54,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-    { "obs",      NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "Signal",   NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Signal",   NULL,       NULL,       1 << 4,       0,           -1 },
 
 };
 
