@@ -41,11 +41,12 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
-<<<<<<< HEAD
-static const char *tags[] = { " ¹", " ²", " 󰊴³", " ⁴", " 󰭻⁵" };
-=======
-static const char *tags[] = { "1", "2", "3", "4", "5"};
->>>>>>> c3a89d8da5fa74ff24647e582984d7aa1b140a85
+
+#define TAGLENGTH 5
+static const char *tags[][TAGLENGTH] = {
+	{ " ¹", " ²", " 󰊴³", " ⁴", " 󰭻⁵" },
+	{ "A", "B", "C", "D", "E"},
+};
 
 static const Rule rules[] = {
 	/* xprop(1):
