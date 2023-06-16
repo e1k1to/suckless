@@ -16,7 +16,7 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "ttf-liberation:size=14,", "NotoColorEmoji:pixelsize=12" };
+static const char *fonts[]          = { "ttf-liberation:size=14,", "Symbols Nerd Font Mono:pixelsize=14" };
 static const char dmenufont[]       = "ttf-liberation:size=14";
 static const char col_gray1[]       = "#001c14";
 static const char col_gray2[]       = "#444444";
@@ -26,10 +26,11 @@ static const char col_primary[]     = "#ff0303";
 static const char col_white[]       = "#ffffff";
 static const char col_black[]       = "#000000";
 static const char col_pink[]        = "#ffcbdb";
+static const char col_red[]         = "#DC143C";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_black, col_pink , col_black },
-	[SchemeSel]  = { col_black, col_white,  col_white  },
+	[SchemeNorm] = { col_white, col_black, col_white },
+	[SchemeSel]  = { col_white, col_red, col_black },
 };
 
 static const char *const autostart[] = {
@@ -40,7 +41,7 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { " ¹", " ²", " 󰊴³", " ⁴", " 󰭻⁵" };
 
 static const Rule rules[] = {
 	/* xprop(1):

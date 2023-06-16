@@ -1,8 +1,13 @@
 #!/bin/bash
 while true
 do
-    num1="$(cat /sys/class/power_supply/BAT0/energy_now)"
-    num2="$(cat /sys/class/power_supply/BAT0/energy_full)"
+    if [ -f /sys/class/power_supply/BAT0/energy_now ]; then
+        num1="$(cat /sys/class/power_supply/BAT0/energy_now)"
+        num2="$(cat /sys/class/power_supply/BAT0/energy_full)"
+    else
+        num1="$(cat /sys/class/power_supply/BAT0/charge_now)"
+        num2="$(cat /sys/class/power_supply/BAT0/charge_full)"
+    fi
 
     porcentoBat=$(echo "scale=2; 100*$num1/$num2" | bc -l)
 
