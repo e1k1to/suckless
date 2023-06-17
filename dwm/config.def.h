@@ -45,7 +45,7 @@ static const char *const autostart[] = {
 #define TAGLENGTH 5
 static const char *tags[][TAGLENGTH] = {
 	{ " ¹", " ²", " 󰊴³", " ⁴", " 󰭻⁵" },
-	{ "A", "B", "C", "D", "E"},
+	{ " 󰙯¹", " ²", " ³", " ⁴", " ⁵"},
 };
 
 static const Rule rules[] = {
@@ -55,7 +55,14 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Signal",   NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "Signal",   NULL,       NULL,       1 << 4,       0,           0 },
+	{ "discord",  NULL,       NULL,       1,            0,           1 },
+	{ "Lutris",   NULL,       NULL,       1 << 2,       0,           0 },
+	{ "steam",    NULL,       NULL,       1 << 2,       0,           0 },
+	{ "riotclientux.exe",NULL,NULL,       1 << 2,       1,           0 },
+	{ "leagueclientux.exe",NULL,NULL,     1 << 2,       1,           0 },
+	{ "league of legends.exe",NULL,NULL,  1 << 2,       0,           0 },
+	{ "explorer.exe", NULL,   NULL,       1 << 3,       1,           0 },
 
 };
 
