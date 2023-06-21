@@ -44,7 +44,7 @@ static const char *const autostart[] = {
 
 #define TAGLENGTH 5
 static const char *tags[][TAGLENGTH] = {
-	{ " ¹", " ²", " 󰊴³", " ⁴", " 󰭻⁵" },
+	{ " ¹", " ²", " 󰊴³", " ⁴", " 󰭻⁵" },
 	{ " 󰙯¹", " ²", " ³", " ⁴", " ⁵"},
 };
 
@@ -58,6 +58,7 @@ static const Rule rules[] = {
 	{ "Signal",   NULL,       NULL,       1 << 4,       0,           0 },
 	{ "discord",  NULL,       NULL,       1,            0,           1 },
 	{ "Lutris",   NULL,       NULL,       1 << 2,       0,           0 },
+	{ "Spotify",  NULL,       NULL,       2,            0,           0 },
 	{ "steam",    NULL,       NULL,       1 << 2,       0,           0 },
 	{ "riotclientux.exe",NULL,NULL,       1 << 2,       1,           0 },
 	{ "leagueclientux.exe",NULL,NULL,     1 << 2,       1,           0 },
