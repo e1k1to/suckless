@@ -5,7 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Anonymous Pro:pixelsize=22antialias=true:autohint=true";
+//static char *font = "Anonymous Pro:pixelsize=22antialias=true:autohint=true";
+static char *font = "Monocraft:pixelsize=22antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
