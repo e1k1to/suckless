@@ -19,8 +19,6 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'chrisbra/unicode.vim'
 
 Plug 'turbio/bracey.vim' 
- 
-Plug 'luk400/vim-jukit'
 
 vim.call('plug#end')
 
