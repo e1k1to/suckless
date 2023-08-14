@@ -8,5 +8,5 @@ cd dwmblocks && make && sudo make install && cd ..
 cd surf && make && sudo make install && cd ..
 cd configFiles && ./install.sh && cd ..
 sudo cp bins/binFolder/* /bin/.
-mkdir /home/eiki/Pictures/
-cp $(pwd)/adfiles/tuxx.png /home/eiki/Pictures/tuxx.png
+mkdir ~/Pictures/
+cp $(pwd)/adfiles/tuxx.png ~/Pictures/tuxx.png
