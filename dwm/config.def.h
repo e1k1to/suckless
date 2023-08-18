@@ -103,6 +103,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("firefox") },
+    { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("toggleDunst") },
     { MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("discord") },
     { MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("pavucontrol") },
     { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacsclient -c -a emacs") },
