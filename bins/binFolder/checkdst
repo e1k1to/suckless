@@ -1,0 +1,9 @@
+#!/bin/bash
+
+atual=$(dunstctl is-paused)
+
+if [[ $atual == "false" ]]; then
+    echo "On"
+else
+    echo "Off"
+fi
