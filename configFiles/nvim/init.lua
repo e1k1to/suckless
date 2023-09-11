@@ -66,4 +66,4 @@ require'nvim-treesitter.configs'.setup {
 }
 
 keymap('n', '<S-l>', '<Cmd>update | !pdflatex -interaction=batchmode main.tex<CR>', {noremap = true})
-
+keymap('n', '<S-m>', '<Cmd>update | !make', {noremap = true})
