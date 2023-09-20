@@ -65,11 +65,16 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function     format                                  argument */
-    { run_command,  "^b#bdedfb^^c#fafafa^ Not: %s ",        "checknot"      },
+    /*
+     * Rosa:    #f3d7f4
+     * Azul:    #bdedfb
+     * Branco:  #ffffff
+    */
+    { run_command,  "^b#bdedfb^^c#a3a3a3^ Not: %s ",        "checknot"      },
     { run_command,  "^b#f3d7f4^ Cpu: %s ",                  "checkcpu"      },
     { run_command,  "^b#ffffff^ Mem: %s ",                  "checkram"      },
     { run_command,  "^b#bdedfb^ Vol: %s ",                  "checkvol"      },
-    { run_command,  "^b#f3d7f4^ Bat: %s ",                  "checkbat"      },
+    { run_command,  "^b#f4d7f4^ Bat: %s ",                  "checkbat"      },
 	{ datetime,     "^b#ffffff^ %s ",                       "%F"            },
-	{ datetime,     "^b#f3d7f4^ %s ",                       "%T"            },
+	{ datetime,     "^b#bdedfb^ %s ",                       "%T"            },
 };

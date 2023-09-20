@@ -25,12 +25,25 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_primary[]     = "#ff0303";
 static const char col_white[]       = "#ffffff";
 static const char col_black[]       = "#000000";
-static const char col_pink[]        = "#ffcbdb";
+static const char col_blue[]        = "#bdedfb";
+static const char col_pink[]        = "#f3d7f4";
 static const char col_red[]         = "#DC143C";
+/*static const char col_gray0[]       = "#a3a3a3";*/
+static const char col_gray0[]       = "#878787";
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_black, col_white },
-	[SchemeSel]  = { col_white, col_red, col_black },
+	[SchemeNorm] = { col_gray0, col_white, col_white },
+    /* fg: Cor do texto caso não selecionado (na tag e no titulo) (e a tag caso tenha notificação)
+     * bg: Tag não selecionada e barra no meio (quando nada aberto na tag)
+     * border: Borda de aplicação não selecionada
+     * */
+	/*               fg         bg         border   */
+	[SchemeSel]  = { col_black, col_blue,  col_blue },
+    /* fg: Cor do texto caso selecionado (na tag e no titulo)
+     * bg: Tag selecionada e barra do meio (quando tem algo aberto na tab)
+     * border: Borda de aplicação selecionada
+     * */
 };
 
 static const char *const autostart[] = {
