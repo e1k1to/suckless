@@ -4,7 +4,7 @@ sudo pacman -S --needed xorg xorg-xinit libx11 libxft libxinerama xclip scrot pi
 cd st && make && sudo make install && cd ..
 cd dwm && make && sudo make install && cd ..
 cd dmenu && make && sudo make install && cd ..
-cd dwmblocks && make && sudo make install && cd ..
+cd slstatus && make && sudo make install && cd ..
 cd surf && make && sudo make install && cd ..
 cd configFiles && ./install.sh && cd ..
 sudo cp bins/binFolder/* /bin/.
