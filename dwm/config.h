@@ -69,7 +69,8 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Signal",   NULL,       NULL,       1 << 4,       0,           0 },
-	{ "discord",  NULL,       NULL,       1,            0,           1 },
+	{ "discord",  NULL,       NULL,       1,            0,           0 },
+	/*{ "discord",  NULL,       NULL,       1,            0,           1 },*/
 	{ "Lutris",   NULL,       NULL,       1 << 2,       0,           0 },
 	{ "Spotify",  NULL,       NULL,       2,            0,           0 },
 	{ "steam",    NULL,       NULL,       1 << 2,       0,           0 },
@@ -77,6 +78,7 @@ static const Rule rules[] = {
 	{ "leagueclientux.exe",NULL,NULL,     1 << 2,       1,           0 },
 	{ "league of legends.exe",NULL,NULL,  1 << 2,       0,           0 },
 	{ "explorer.exe", NULL,   NULL,       1 << 3,       1,           0 },
+	{ "smartclient", NULL,   NULL,       1 << 3,       1,           0 },
 
 };
 

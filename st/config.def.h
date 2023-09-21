@@ -101,23 +101,23 @@ static const char *colorname[] = {
 	/* 8 normal colors */
 	"#5C5F77", //preto
 	"#ff9191", //vermelho
-	"#6eff7a", //verde
+	"#5de368", //verde
 	"#FDFD96", //amarelo
 	"#6edeff", //azul
-	"#ffdde8", //rosa
-	"#A4D8D8", //ciano
+	"#ffbad0", //rosa
+	"#ca9bf7", //ciano
 	"#ACB0BE", //branco
 
 	/* 8 bright colors */
 	"#6C6F85", //preto
 	"#ff9191", //vermelho
-	"#6eff7a", //verde
+	"#5de368", //verde
 	"#FDFD96", //amarelo
 	//"#BDEDFB", //azul
     "#6edeff",  //azul
 	//"#F3D7F4", //rosa
-	"#ffdde8", //rosa
-	"#A4D8D8", //ciano
+	"#ffbad0", //rosa
+	"#ca9bf7", //ciano
 	"#BCC0CC", //branco
 
 [256] = "#4C4F69", /* default foreground colour */
