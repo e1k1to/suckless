@@ -25,20 +25,21 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_primary[]     = "#ff0303";
 static const char col_white[]       = "#ffffff";
 static const char col_black[]       = "#000000";
-static const char col_pink[]        = "#bdedfb";
-static const char col_blue[]        = "#f3d7f4";
+static const char col_blue[]        = "#bdedfb";
+static const char col_pink[]        = "#f3d7f4";
 static const char col_red[]         = "#DC143C";
-static const char col_gray0[]       = "#a3a3a3";
+/*static const char col_gray0[]       = "#a3a3a3";*/
+static const char col_gray0[]       = "#878787";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_black, col_white },
-    /* fg: Cor do texto caso não selecionado (na tag e no titulo)
+	[SchemeNorm] = { col_gray0, col_white, col_white },
+    /* fg: Cor do texto caso não selecionado (na tag e no titulo) (e a tag caso tenha notificação)
      * bg: Tag não selecionada e barra no meio (quando nada aberto na tag)
      * border: Borda de aplicação não selecionada
      * */
 	/*               fg         bg         border   */
-	[SchemeSel]  = { col_white, col_red, col_black },
+	[SchemeSel]  = { col_black, col_blue,  col_blue },
     /* fg: Cor do texto caso selecionado (na tag e no titulo)
      * bg: Tag selecionada e barra do meio (quando tem algo aberto na tab)
      * border: Borda de aplicação selecionada
@@ -68,6 +69,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Signal",   NULL,       NULL,       1 << 4,       0,           0 },
+    /*{ "discord",  NULL,       NULL,       2,            0,           0 },*/
 	{ "discord",  NULL,       NULL,       1,            0,           1 },
 	{ "Lutris",   NULL,       NULL,       1 << 2,       0,           0 },
 	{ "Spotify",  NULL,       NULL,       2,            0,           0 },
@@ -76,6 +78,7 @@ static const Rule rules[] = {
 	{ "leagueclientux.exe",NULL,NULL,     1 << 2,       1,           0 },
 	{ "league of legends.exe",NULL,NULL,  1 << 2,       0,           0 },
 	{ "explorer.exe", NULL,   NULL,       1 << 3,       1,           0 },
+	{ "smartclient", NULL,   NULL,       1 << 3,       1,           0 },
 
 };
 
@@ -107,7 +110,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_white, "-sb", col_white, "-sf", col_black, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_white, "-nf", col_gray0, "-sb", col_blue, "-sf", col_white, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
