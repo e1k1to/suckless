@@ -78,7 +78,7 @@ static const Rule rules[] = {
 	{ "leagueclientux.exe",NULL,NULL,     1 << 2,       1,           0 },
 	{ "league of legends.exe",NULL,NULL,  1 << 2,       0,           0 },
 	{ "explorer.exe", NULL,   NULL,       1 << 3,       1,           0 },
-	{ "smartclient", NULL,   NULL,       1 << 3,       1,           0 },
+	{ "smartclient", NULL,    NULL,       1 << 3,       0,           0 },
 
 };
 
