@@ -76,6 +76,6 @@ static const struct arg args[] = {
     { run_command,  "^b#ffffff^ Mem: %s ",                  "checkram"      },
     { run_command,  "^b#ffdde8^ Vol: %s ",                  "checkvol"      },
     { run_command,  "^b#bdedfb^ Bat: %s ",                  "checkbat"      },
-	{ datetime,     "^b#ffffff^ %s ",                       "%F"            },
+	{ datetime,     "^b#ffffff^ %s ",                       "%d/%m/%Y"      },
 	{ datetime,     "^b#ffdde8^ %s ",                       "%T"            },
 };
