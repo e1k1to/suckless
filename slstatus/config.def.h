@@ -72,7 +72,8 @@ static const struct arg args[] = {
      * Cinza:   #878787
     */
     { run_command,  "^b#ffdde8^^c#878787^ Not: %s ",        "checknot"      },
-    { run_command,  "^b#bdedfb^ Cpu: %s ",                  "checkcpu"      },
+/*    { run_command,  "^b#bdedfb^ Cpu: %s ",                  "checkcpu"      },*/
+    { cpu_perc,     "^b#bdedfb^ Cpu: %s%% ",              NULL            },
     { run_command,  "^b#ffffff^ Mem: %s ",                  "checkram"      },
     { run_command,  "^b#ffdde8^ Vol: %s ",                  "checkvol"      },
     { run_command,  "^b#bdedfb^ Bat: %s ",                  "checkbat"      },
