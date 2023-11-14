@@ -20,6 +20,8 @@ Plug 'chrisbra/unicode.vim'
 
 Plug 'turbio/bracey.vim' 
 
+Plug 'mattn/emmet-vim'
+
 Plug 'norcalli/nvim-colorizer.lua'
 
 vim.call('plug#end')
