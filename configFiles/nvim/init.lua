@@ -24,6 +24,8 @@ Plug 'mattn/emmet-vim'
 
 Plug 'norcalli/nvim-colorizer.lua'
 
+Plug 'preservim/nerdtree'
+
 vim.call('plug#end')
 
 require'nvim-treesitter.configs'.setup {
@@ -71,3 +73,6 @@ require'nvim-treesitter.configs'.setup {
 
 keymap('n', '<S-l>', '<Cmd>update | !pdflatex -interaction=batchmode main.tex<CR>', {noremap = true})
 keymap('n', '<S-m>', '<Cmd>update | !make<CR>', {noremap = true})
+keymap('n', '<S-t>', '<Cmd>NERDTreeToggle<CR>', {noremap = true})
+keymap('n', '<S-Left>', '<Cmd>NERDTreeFocus<CR>', {noremap = true})
+keymap('n', '<S-Right>', '<Cmd>wincmd w<CR>', {noremap = true})
