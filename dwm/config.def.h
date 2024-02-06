@@ -33,17 +33,19 @@ static const char col_gray0[]       = "#878787";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray0, col_white, col_white },
+	//[SchemeNorm] = { col_gray0, col_white, col_white },
     /* fg: Cor do texto caso não selecionado (na tag e no titulo) (e a tag caso tenha notificação)
      * bg: Tag não selecionada e barra no meio (quando nada aberto na tag)
      * border: Borda de aplicação não selecionada
      * */
 	/*               fg         bg         border   */
-	[SchemeSel]  = { col_black, col_blue,  col_blue },
+	//[SchemeSel]  = { col_black, col_blue,  col_blue },
     /* fg: Cor do texto caso selecionado (na tag e no titulo)
      * bg: Tag selecionada e barra do meio (quando tem algo aberto na tab)
      * border: Borda de aplicação selecionada
      * */
+    [SchemeNorm] = { col_white, col_black, col_black },
+    [SchemeSel]  = { col_black, col_white,  col_white },
 };
 
 static const char *const autostart[] = {
@@ -110,7 +112,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_white, "-nf", col_gray0, "-sb", col_blue, "-sf", col_white, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
@@ -122,7 +124,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("discord") },
     { MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("pavucontrol") },
     { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacsclient -c -a emacs") },
-    { MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("spotify-launcher") },
+    { MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot") },
     { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
     { MODKEY,                       XK_g,      spawn,          SHCMD("openurl") },
     { 0,                            XK_Print,  spawn,          SHCMD("screenshot") },
@@ -131,6 +133,9 @@ static const Key keys[] = {
 	{ 0,				XF86XK_AudioLowerVolume,spawn, 	       SHCMD("pamixer -d 5") },
 	{ 0,				XF86XK_AudioRaiseVolume,spawn, 	       SHCMD("pamixer -i 5") },
 	{ 0,				XF86XK_AudioMute,spawn, 	           SHCMD("pamixer -t") },
+    { 0,                        XF86XK_AudioPlay,      spawn,              SHCMD("playerctl play-pause") },
+    { 0,                        XF86XK_AudioPrev,      spawn,              SHCMD("playerctl previous") },
+    { 0,                        XF86XK_AudioNext,      spawn,              SHCMD("playerctl next") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

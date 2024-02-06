@@ -71,12 +71,11 @@ static const struct arg args[] = {
      * Branco:  #ffffff
      * Cinza:   #878787
     */
-    { run_command,  "^b#ffdde8^^c#878787^ Not: %s ",        "checknot"      },
-/*    { run_command,  "^b#bdedfb^ Cpu: %s ",                  "checkcpu"      },*/
-    { cpu_perc,     "^b#bdedfb^ Cpu: %s%% ",              NULL            },
-    { run_command,  "^b#ffffff^ Mem: %s ",                  "checkram"      },
-    { run_command,  "^b#ffdde8^ Vol: %s ",                  "checkvol"      },
-    { run_command,  "^b#bdedfb^ Bat: %s ",                  "checkbat"      },
-	{ datetime,     "^b#ffffff^ %s ",                       "%d/%m/%Y"      },
-	{ datetime,     "^b#ffdde8^ %s ",                       "%T"            },
+    { run_command,  "^b#000000^^c#ffffff^ Not: %s ",        "checknot"      },
+    { cpu_perc,     "^b#ffffff^^c#000000^ Cpu: %s%% ",              NULL            },
+    { run_command,  "^b#000000^^c#ffffff^ Mem: %s ",                  "checkram"      },
+    { run_command,  "^b#ffffff^^c#000000^ Vol: %s ",                  "checkvol"      },
+    //{ run_command,  "^b#bdedfb^ Bat: %s ",                  "checkbat"      },
+	{ datetime,     "^b#000000^^c#ffffff^ %s ",                       "%d/%m/%Y"      },
+	{ datetime,     "^b#ffffff^^c#000000^ %s ",                       "%T"            },
 };
