@@ -38,7 +38,7 @@ static Parameter defconfig[ParameterLast] = {
 	[MediaManualPlay]     =       { { .i = 0 },     },
 	[PreferredLanguages]  =       { { .v = (char *[]){ NULL } }, },
 	[RunInFullscreen]     =       { { .i = 0 },     },
-	[ScrollBars]          =       { { .i = 1 },     },
+	[ScrollBars]          =       { { .i = 0 },     },
 	[ShowIndicators]      =       { { .i = 1 },     },
 	[SiteQuirks]          =       { { .i = 1 },     },
 	[SmoothScrolling]     =       { { .i = 0 },     },
@@ -152,8 +152,8 @@ static Key keys[] = {
 	{ 0,                     GDK_KEY_h,      navigate,   { .i = -1 } },
 
 	/* vertical and horizontal scrolling, in viewport percentage */
-	{ 0,                     GDK_KEY_j,      scrollv,    { .i = +5 } },
-	{ 0,                     GDK_KEY_k,      scrollv,    { .i = -5 } },
+	{ 0,                     GDK_KEY_j,      scrollv,    { .i = +1 } },
+	{ 0,                     GDK_KEY_k,      scrollv,    { .i = -1 } },
 	{ 0,                     GDK_KEY_space,  scrollv,    { .i = +50 } },
 	{ 0,                     GDK_KEY_b,      scrollv,    { .i = -50 } },
 	{ 0,                     GDK_KEY_i,      scrollh,    { .i = +10 } },
