@@ -1,2 +1,4 @@
 #!/bin/bash
-scrot -s /tmp/ -e 'xclip -selection clipboard -t image/png -i $f'
+rm -f /tmp/screenshot.png
+scrot -s /tmp/screenshot.png
+xclip -selection clipboard -t image/png /tmp/screenshot.png
