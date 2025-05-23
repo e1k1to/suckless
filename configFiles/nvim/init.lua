@@ -2,9 +2,9 @@ print("lmao")
 
 vim.wo.number = true
 vim.wo.rnu = true
-vim.bo.tabstop=4
-vim.bo.shiftwidth=4
-vim.bo.expandtab = true
+vim.opt.tabstop=4
+vim.opt.shiftwidth=4
+vim.opt.expandtab = true
 
 local keymap = vim.api.nvim_set_keymap
 
