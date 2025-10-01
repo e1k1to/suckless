@@ -1,5 +1,5 @@
 # slock version
-VERSION = 1.5
+VERSION = 1.6
 
 # Customize below to fit your system
 
@@ -12,7 +12,7 @@ X11LIB = /usr/X11R6/lib
 
 # includes and libs
 INCS = -I. -I/usr/include -I${X11INC}
-LIBS = -L/usr/lib -lc -lcrypt -L${X11LIB} -lX11 -lXext -lXrandr -lpam
+LIBS = -L/usr/lib -lc -lcrypt -L${X11LIB} -lX11 -lXext -lXrandr -lImlib2
 
 # flags
 CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE -DHAVE_SHADOW_H
@@ -27,6 +27,3 @@ COMPATSRC = explicit_bzero.c
 #CPPFLAGS = -DVERSION=\"${VERSION}\" -D_BSD_SOURCE -D_NETBSD_SOURCE
 # On OpenBSD set COMPATSRC to empty
 #COMPATSRC =
-
-# compiler and linker
-CC = cc

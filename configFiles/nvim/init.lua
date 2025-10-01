@@ -11,20 +11,26 @@ local keymap = vim.api.nvim_set_keymap
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
-
 Plug 'dhruvasagar/vim-table-mode'
-
 Plug 'chrisbra/unicode.vim'
-
 Plug 'turbio/bracey.vim' 
-
 Plug 'mattn/emmet-vim'
-
 Plug 'norcalli/nvim-colorizer.lua'
-
 Plug 'preservim/nerdtree'
-
+Plug 'andweeb/presence.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'neovim/nvim-lspconfig'
 vim.call('plug#end')
+
+require("mason").setup()
+
+vim.lsp.enable('csharp_ls')
+vim.lsp.enable('html')
+vim.lsp.enable('cssls')
+vim.lsp.enable('eslint')
+vim.lsp.enable('bashls')
+vim.lsp.enable('jsonls')
+vim.lsp.enable('pylsp')
 
 keymap('n', '<S-l>', '<Cmd>update | !pdflatex -interaction=batchmode main.tex<CR>', {noremap = true})
 keymap('n', '<S-m>', '<Cmd>update | !make<CR>', {noremap = true})
