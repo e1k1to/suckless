@@ -82,6 +82,9 @@ cmp.setup({
   })
 })
 
+vim.lsp.set_log_level("ERROR")
+
+keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true, silent = true })
 keymap('n', '<S-l>', '<Cmd>update | !pdflatex -interaction=batchmode main.tex<CR>', {noremap = true})
 keymap('n', '<S-m>', '<Cmd>update | !make<CR>', {noremap = true})
 keymap('n', '<S-t>', '<Cmd>NERDTreeToggle<CR>', {noremap = true})
