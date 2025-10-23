@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# spotify-notify.sh
+# Envia notificações do Spotify com o título da música, artista e a capa do álbum
+
+TIMEOUT=3000  # Tempo de exibição da notificação (em milissegundos)
+
+# Diretório temporário para armazenar a capa da música
+CACHE_DIR="/tmp/spotify_covers"
+mkdir -p "$CACHE_DIR"
+
+lastartist=""
+lasttitle=""
+
+# Verifica se o Spotify está ativo
+while true; do
+    if ! playerctl -l | grep -qi spotify; then
+        sleep 2
+        continue
+    fi
+
+      # Pegue as informações de artista, título e capa
+    artist=$(playerctl --player=spotify metadata --format '{{xesam:artist}}')
+    title=$(playerctl --player=spotify metadata --format '{{xesam:title}}')
+    if [[ "$artist" == "$lastartist" && "$title" == "$lasttitle" ]]; then
+        sleep 1
+        continue
+    fi
+    lastartist="$artist"
+    lasttitle="$title"
+      # Pega o URL da capa do álbum
+    cover_url=$(playerctl --player=spotify metadata --format '{{mpris:artUrl}}' 2>/dev/null)
+    cover_path="$CACHE_DIR/cover.jpg"
+
+        # Baixa a capa, se necessário
+    if [ "$cover_url" ]; then
+        wget -q -O "$cover_path" "$cover_url"
+    fi
+
+        # Envia a notificação para o dunst com a capa
+    if [ -f "$cover_path" ]; then
+          # Se a capa foi baixada com sucesso, usa ela como ícone
+          notify-send -u low -t "$TIMEOUT" -h string:image_path:"$cover_path" "$artist" "$title"
+    else
+        # Se não houver capa, envia uma notificação simples sem ícone
+        notify-send -u low -t "$TIMEOUT" "$artist" "$title"
+    fi
+
+    sleep 1
+done
+

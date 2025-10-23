@@ -1,0 +1,11 @@
+#!/bin/bash
+spotify-launcher &
+spotify-notify &
+
+while pgrep -x "spotify" > /dev/null; do
+    sleep 5
+done
+
+# Quando o Spotify for fechado, termina o spotify-notify
+    pkill -f "spotify-notify"
+fi
